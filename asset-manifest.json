@@ -1,0 +1,35 @@
+{
+  "files": {
+    "main.css": "/news-feeds/static/css/main.690b4a9b.chunk.css",
+    "main.js": "/news-feeds/static/js/main.216e1622.chunk.js",
+    "main.js.map": "/news-feeds/static/js/main.216e1622.chunk.js.map",
+    "runtime-main.js": "/news-feeds/static/js/runtime-main.b101b7c0.js",
+    "runtime-main.js.map": "/news-feeds/static/js/runtime-main.b101b7c0.js.map",
+    "static/js/2.730b44b2.chunk.js": "/news-feeds/static/js/2.730b44b2.chunk.js",
+    "static/js/2.730b44b2.chunk.js.map": "/news-feeds/static/js/2.730b44b2.chunk.js.map",
+    "index.html": "/news-feeds/index.html",
+    "precache-manifest.731a166075556bc154cf54f3446f328d.js": "/news-feeds/precache-manifest.731a166075556bc154cf54f3446f328d.js",
+    "service-worker.js": "/news-feeds/service-worker.js",
+    "static/css/main.690b4a9b.chunk.css.map": "/news-feeds/static/css/main.690b4a9b.chunk.css.map",
+    "static/js/2.730b44b2.chunk.js.LICENSE.txt": "/news-feeds/static/js/2.730b44b2.chunk.js.LICENSE.txt",
+    "static/media/cancel.svg": "/news-feeds/static/media/cancel.9bf4b416.svg",
+    "static/media/facebook.svg": "/news-feeds/static/media/facebook.700dba70.svg",
+    "static/media/instagram.svg": "/news-feeds/static/media/instagram.fc23b902.svg",
+    "static/media/loading.svg": "/news-feeds/static/media/loading.337899df.svg",
+    "static/media/news-room.png": "/news-feeds/static/media/news-room.b3826011.png",
+    "static/media/next.svg": "/news-feeds/static/media/next.093cce66.svg",
+    "static/media/nextBlocked.svg": "/news-feeds/static/media/nextBlocked.3ac47e47.svg",
+    "static/media/previous.svg": "/news-feeds/static/media/previous.248e9359.svg",
+    "static/media/previousBlocked.svg": "/news-feeds/static/media/previousBlocked.1619d2cb.svg",
+    "static/media/search.svg": "/news-feeds/static/media/search.7484088f.svg",
+    "static/media/searchBlocked.svg": "/news-feeds/static/media/searchBlocked.3ec51afb.svg",
+    "static/media/technical_difficulties.jpg": "/news-feeds/static/media/technical_difficulties.d94af8cb.jpg",
+    "static/media/twitter.svg": "/news-feeds/static/media/twitter.a57ea219.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.b101b7c0.js",
+    "static/js/2.730b44b2.chunk.js",
+    "static/css/main.690b4a9b.chunk.css",
+    "static/js/main.216e1622.chunk.js"
+  ]
+}
