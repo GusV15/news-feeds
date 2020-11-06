@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 import styled from "styled-components";
 import imgNewsRoom from "../assets/news-room.png";
 import imgSearch from "../assets/search.svg";
+import imgSearchBlocked from "../assets/searchBlocked.svg";
 
 const HeaderStyles = styled.header`
   display: flex;
@@ -12,7 +13,8 @@ const HeaderStyles = styled.header`
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  height: 105px;
+  min-height: 105px;
+  height: auto;
   background-color: var(--bg-main-color);
   border-bottom: 0.1em solid #e5e5e5;
   .logo-container {
@@ -29,11 +31,13 @@ const HeaderStyles = styled.header`
     height: 50px;
   }
   .search-container {
+    display: flex;
     margin-right: 4em;
   }
-  .search-container input {
+  .search-container input[type="text"] {
     min-width: 12%;
     height: 40px;
+    line-height: 40px;
     font-size: 0.9em;
     margin-right: 1.7em;
     padding-left: 1em;
@@ -41,10 +45,24 @@ const HeaderStyles = styled.header`
     outline: none;
     border-radius: 7px;
   }
-  .search-container img {
-    width: 28px;
-    height: 28px;
-    margin-top: 6px;
+  .search-container input[type="text"]:focus {
+    border: 1px solid var(--main-color);
+  }
+  .search-container input[type="image"] {
+    width: 40px;
+    height: 40px;
+    margin-left: -15px;
+    border: none;
+    outline: none;
+  }
+  @media screen and (max-width: 530px) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .logo-container,
+    .search-container {
+      margin: 1em 0;
+    }
   }
 `;
 
@@ -55,25 +73,38 @@ class Header extends Component {
 
   setKeyword = ({ target: { value: keyword } }) => this.setState({ keyword });
 
-  searchNews = () => this.props.onGetByKeyword(this.state.keyword);
+  searchNews = (e) => {
+    e.preventDefault();
+    this.props.onGetByKeyword(this.state.keyword);
+  };
 
   render() {
     const { keyword } = this.state;
     return (
       <HeaderStyles>
         <div className="logo-container">
-          <img src={imgNewsRoom} alt="news-room" />
+          <a href="/" alt="news-room">
+            <img src={imgNewsRoom} alt="news-room" />
+          </a>
           <h2>News Feeds</h2>
         </div>
         <div className="search-container">
-          <input
-            type="text"
-            placeholder="Buscar"
-            value={keyword}
-            onChange={this.setKeyword}
-          />
-          <Link to={`/search/${keyword}`} onClick={this.searchNews}>
-            <img src={imgSearch} alt="search-news" />
+          <form onSubmit={this.searchNews}>
+            <input
+              type="text"
+              placeholder="Buscar noticias"
+              value={keyword}
+              onChange={this.setKeyword}
+            />
+          </form>
+          <Link to={`/search/${keyword}`}>
+            <input
+              onClick={this.searchNews}
+              type="image"
+              src={keyword ? imgSearch : imgSearchBlocked}
+              disabled={keyword ? false : true}
+              alt="search-news"
+            />
           </Link>
         </div>
       </HeaderStyles>

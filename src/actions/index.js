@@ -1,9 +1,10 @@
 export const REQUESTING_NEWS = "REQUESTING_NEWS";
 export const REQUESTING_ERROR = "REQUESTING_ERROR";
 export const REQUESTING_SUCCESS = "REQUESTING_SUCCESS";
+export const GO_PREVIOUS_PAGE = "GO_PREVIOUS_PAGE";
+export const GO_NEXT_PAGE = "GO_NEXT_PAGE";
 
 const makeRequest = (param, url, dispatch) => {
-  console.log(`${url}${param}`);
   dispatch(requestingNews(true));
   dispatch(requestingError(false));
   fetch(`${url}${param}`)
@@ -44,4 +45,12 @@ export const requestingError = (isError) => ({
 export const requestingSuccess = (news) => ({
   type: REQUESTING_SUCCESS,
   news
+});
+
+export const goPreviousPage = () => ({
+  type: GO_PREVIOUS_PAGE
+});
+
+export const goNextPage = () => ({
+  type: GO_NEXT_PAGE
 });

@@ -6,36 +6,63 @@ import { NavLink } from "react-router-dom";
 import { getDate } from "../data/index";
 import styled from "styled-components";
 
-const NavbarStyles = styled.nav`
+const NavbarStyles = styled.section`
   width: 100%;
-  height: 50px;
+  min-height: 65px;
   .categories-list {
     display: flex;
-    flex-flow: row nowrap;
+    flex-flow: row wrap;
     justify-content: space-between;
     align-items: center;
     list-style: none;
     text-transform: uppercase;
   }
   .categories-list > * {
-    width: 20%;
-    height: 45px;
-    line-height: 45px;
+    width: 12%;
+    height: 65px;
+    line-height: 65px;
     text-decoration: none;
     color: var(--text-main-color);
     font-size: 0.9em;
     font-weight: 500;
   }
   .categories {
-    border-bottom: 2px solid var(--text-main-color);
+    color: var(--main-color);
+  }
+  .categories-list > *:hover {
+    transform: scale(1.02);
+    transition-duration: 0.2s;
+  }
+  @media screen and (max-width: 930px) {
+    .categories-list > * {
+      width: 25%;
+    }
+  }
+  @media screen and (max-width: 670px) {
+    .categories-list {
+      display: flex;
+      flex-flow: column wrap;
+      justify-content: center;
+    }
+  }
+  @media screen and (max-width: 500px) {
+    .categories-list {
+      display: flex;
+      flex-flow: column wrap;
+      justify-content: center;
+      align-items: center;
+    }
+    .categories-list > * {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      height: 35px;
+    }
   }
 `;
 
 class Navbar extends Component {
-  componentDidMount = () => {
-    this.props.onGetByDate(getDate());
-  };
-
   render() {
     const { onGetByCategory, onGetByDate } = this.props;
     return (
