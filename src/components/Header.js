@@ -97,7 +97,10 @@ class Header extends Component {
               onChange={this.setKeyword}
             />
           </form>
-          <Link to={`/search/${keyword}`}>
+          <Link
+          to={`/search/${keyword}`}
+          onClick={() => this.props.onGetByKeyword(keyword)}
+          >
             <input
               onClick={this.searchNews}
               type="image"

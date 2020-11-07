@@ -127,7 +127,7 @@ const Footer = () => {
       </ul>
       <div className="copyright">
         <p>
-          Copyright &copy;2020 by Gustavo Velasquez, todos los derechos
+          Copyright &copy;2020 by News Feeds, todos los derechos
           reservados.
         </p>
       </div>

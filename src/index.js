@@ -14,7 +14,7 @@ const rootElement = document.getElementById("root");
 ReactDOM.render(
   <React.StrictMode>
     <Provider store={store}>
-      <Router>
+      <Router basename="/news-feeds">
         <Main />
       </Router>
     </Provider>
