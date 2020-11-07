@@ -17,24 +17,24 @@ const HeaderStyles = styled.header`
   height: auto;
   background-color: var(--bg-main-color);
   border-bottom: 0.1em solid #e5e5e5;
-  .logo-container {
+  .logo__container {
     margin-left: 4em;
   }
-  .logo-container h2 {
+  .logo__container h2 {
     font-size: 1.05em;
     font-weight: 500;
     letter-spacing: 0.04em;
     color: var(--title-color);
   }
-  .logo-container img {
+  .logo__container img {
     width: 3em;
     height: 50px;
   }
-  .search-container {
+  .search__container {
     display: flex;
     margin-right: 4em;
   }
-  .search-container input[type="text"] {
+  .search__container input[type="text"] {
     min-width: 12%;
     height: 40px;
     line-height: 40px;
@@ -45,10 +45,10 @@ const HeaderStyles = styled.header`
     outline: none;
     border-radius: 7px;
   }
-  .search-container input[type="text"]:focus {
+  .search__container input[type="text"]:focus {
     border: 1px solid var(--main-color);
   }
-  .search-container input[type="image"] {
+  .search__container input[type="image"] {
     width: 40px;
     height: 40px;
     margin-left: -15px;
@@ -59,8 +59,8 @@ const HeaderStyles = styled.header`
     display: flex;
     flex-direction: column;
     align-items: center;
-    .logo-container,
-    .search-container {
+    .logo__container,
+    .search__container {
       margin: 1em 0;
     }
   }
@@ -82,13 +82,13 @@ class Header extends Component {
     const { keyword } = this.state;
     return (
       <HeaderStyles>
-        <div className="logo-container">
+        <div className="logo__container">
           <a href="/" alt="news-room">
             <img src={imgNewsRoom} alt="news-room" />
           </a>
           <h2>News Feeds</h2>
         </div>
-        <div className="search-container">
+        <div className="search__container">
           <form onSubmit={this.searchNews}>
             <input
               type="text"

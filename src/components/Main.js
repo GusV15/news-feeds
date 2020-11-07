@@ -6,7 +6,7 @@ import Routes from "../Routes";
 import Footer from "./Footer";
 import styled from "styled-components";
 
-const WrapperStyles = styled.body`
+const WrapperStyles = styled.div`
   margin: 0;
   padding: 0;
   box-sizing: border-box;

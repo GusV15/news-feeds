@@ -9,7 +9,7 @@ import styled from "styled-components";
 const NavbarStyles = styled.section`
   width: 100%;
   min-height: 65px;
-  .categories-list {
+  .categories__list {
     display: flex;
     flex-flow: row wrap;
     justify-content: space-between;
@@ -17,7 +17,7 @@ const NavbarStyles = styled.section`
     list-style: none;
     text-transform: uppercase;
   }
-  .categories-list > * {
+  .categories__list > * {
     width: 12%;
     height: 65px;
     line-height: 65px;
@@ -29,30 +29,30 @@ const NavbarStyles = styled.section`
   .categories {
     color: var(--main-color);
   }
-  .categories-list > *:hover {
+  .categories__list > *:hover {
     transform: scale(1.02);
     transition-duration: 0.2s;
   }
   @media screen and (max-width: 930px) {
-    .categories-list > * {
+    .categories__list > * {
       width: 25%;
     }
   }
   @media screen and (max-width: 670px) {
-    .categories-list {
+    .categories__list {
       display: flex;
       flex-flow: column wrap;
       justify-content: center;
     }
   }
   @media screen and (max-width: 500px) {
-    .categories-list {
+    .categories__list {
       display: flex;
       flex-flow: column wrap;
       justify-content: center;
       align-items: center;
     }
-    .categories-list > * {
+    .categories__list > * {
       display: flex;
       justify-content: center;
       align-items: center;
@@ -67,7 +67,7 @@ class Navbar extends Component {
     const { onGetByCategory, onGetByDate } = this.props;
     return (
       <NavbarStyles>
-        <div className="categories-list">
+        <div className="categories__list">
           <NavLink
             exact
             to="/"

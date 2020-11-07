@@ -33,7 +33,7 @@ const LoadingStyles = styled.div`
   min-height: 320px;
   background-color: var(--bg-secondary-color);
   border-top: 0.1em solid #e5e5e5;
-  .loading-container {
+  .loading__container {
     display: block;
     width: 6em;
     height: 6em;
@@ -83,7 +83,7 @@ class NewsContainer extends Component {
     } else if (isLoading) {
       return (
         <LoadingStyles>
-          <img className="loading-container" src={loadingImg} alt="loading" />
+          <img className="loading__container" src={loadingImg} alt="loading" />
         </LoadingStyles>
       );
     } else {
